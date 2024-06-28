@@ -6,7 +6,6 @@ import PdfPage from "./PdfPage";
 export default function PdfViewer({ doc }) {
   const [pages, setPages] = useState([]);
 
-  const [total, setTotal] = useState(0);
   const [error, setError] = useState(false);
   //화질 담당
   const [scale, setScale] = useState(10);
@@ -26,7 +25,6 @@ export default function PdfViewer({ doc }) {
       try {
         console.log(doc);
         const totalPage = doc.numPages;
-        setTotal(totalPage);
 
         if (totalPage === 0) {
           throw new Error(`전체 페이지가 0`);

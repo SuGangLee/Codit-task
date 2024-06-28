@@ -15,6 +15,8 @@ function App() {
     setIsTabOpen(false);
   };
   const [fileInfo, setFileInfo] = useState(null);
+
+  //파일을 업로드하고 pdf의 doc객체로 변환하는 함수
   const handleFileChange = async (event) => {
     const file = event.target.files?.[0];
     if (file) {
