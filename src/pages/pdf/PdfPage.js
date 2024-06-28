@@ -1,16 +1,6 @@
-import { PDFDocumentProxy } from "pdfjs-dist";
-import * as pdfjsLib from "pdfjs-dist";
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import React, { useCallback, useEffect, useRef } from "react";
 
 const PdfPage = ({ page, doc, scale = 10 }) => {
-  const [propsInfo, setPropsInfo] = useState({
-    // pageLoc: 5,
-    // startX: 235.2, //0,
-    // middleX: (235.2 + 359.04000000000013) / 2,
-    // endX: 359.04000000000013, // 0,
-    // locY: 746.88,
-  });
-  const [lists, setLists] = useState([]);
   const canvasRef = useRef();
 
   const drawCanvas = useCallback(
