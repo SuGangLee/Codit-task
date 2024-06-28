@@ -1,27 +1,27 @@
 # Codit-task
-
+<br/>
 코딧 인턴 과제입니다.
-
+<br/>
 
 
 ## 과제 내용
-
+<br/>
 
 **1.사용자는 PDF 파일을 업로드할 수 있어야 한다.**
 **2.업로드된 PDF 파일을 웹 페이지에서 볼 수 있어야 한다.**
 **3. 뷰잉된 PDF파일에서 신구조문을 배열 형태로 파생하는 결과를 도출할 수 있어야 한다.(이중 배열 형태의 결과물)**
-
+<br/>
 1) react.js, node.js, PDF.js를 이용하여 pdf 애플리케이션 구현
 2) 첨부된 PDF 의안 파일(2100113_의사국 의안과_의안원문.pdf)을 업로드하여 웹페이지에서 뷰잉함
 3) 뷰잉된 PDF의안 파일을 배열 형태로 파싱함 (왼쪽, 오른쪽을 구성하는 이중 배열 형태)
-
 참고:  https://thecodit.com/kr-ko/bill/sh/20200603-000000002100113 
-
+<br/>
 ## 컴포넌트 설명
-
+<br/>
 
 
 #### 메인 페이지
+
 
 `App.js`  
     
@@ -29,8 +29,10 @@
 - 업로드 한 파일을 pdf.js의 doc객체로 만든다. 컴포넌트에 이 doc 객체를 전달한다. 
 - 파일을 업로드 시, pdf를 볼 수 있는 'pdf 원문보기' 버튼과 '개정사항 요약' 버튼이 추가된다.
 
+<br/>
+pages/pdf 
+<br/>
 
-pages/pdf
 #### pdf 원문보기 페이지
 
 `PdfViewer.js`  
@@ -43,11 +45,9 @@ pages/pdf
 - 각 페이지 별로 getPage 로 현재 페이지 정보를 받아오고 viewport를 설정한다.
 - canvas 태그로 현재 페이지를 렌더링한다.
 
-  
 #### 개정사항 요약 페이지
-
 `PdfParse.js`
-    
+
 1. 개정사항은 "신·구조문대비표" 문자열 이후에 테이블 형식으로 쓰였다. 이것의 y위치로 테이블의 시작 부분을 구분했다. 
 2. 모든 테이블이 고정 너비를 가짐을 확인할 수 있었다. 이것으로 열을 구분했다. middleX = ( 행 끝 x위치 - 행 시작 x위치 ) / 2  
 3. 얻은 행렬 데이터를 table 구조로 출력한다.
@@ -65,11 +65,11 @@ git clone "https://github.com/SuGangLee/Codit-task.git" 으로 Codit-task 디렉
 코드 에디터에서 디렉토리 오픈
 
 ### `npm install`
-필요한 패키지 다운로드 
+필요한 패키지 다운로드 <br/>
 ~~/codit-task $: npm install
 
 ### `npm start`
-localhost:3000에서 실행됨
+localhost:3000에서 실행됨 <br/>
 ~~/codit-task $: npm start 
 
 **Note: 고민사항**
