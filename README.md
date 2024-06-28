@@ -24,8 +24,10 @@
 - 업로드 한 파일을 pdf.js의 doc객체로 만든다. 컴포넌트에 이 doc 객체를 전달한다. 
 - 파일을 업로드 시, pdf를 볼 수 있는 'pdf 원문보기' 버튼과 '개정사항 요약' 버튼이 추가된다.
 
+
 **pdf 원문보기 페이지**
-pages/pdf
+
+- pages/pdf
 **PdfViewer.js** (한번에 pdf를 보여주는 컴포넌트) 
 - doc 객체로 pdf의 page 정보를 PdfPage.js에 넘긴다. 
 - 한번에 여러 pdf 페이지를 뷰잉할 수 있도록 page 로직과 분리하였다. 
