@@ -65,11 +65,11 @@ git clone "https://github.com/SuGangLee/Codit-task.git" 으로 Codit-task 디렉
 코드 에디터에서 디렉토리 오픈
 
 ### `npm install`
-필요한 패키지 다운로드 
+필요한 패키지 다운로드 <br/>
 ~~/codit-task $: npm install
 
 ### `npm start`
-localhost:3000에서 실행됨
+localhost:3000에서 실행됨 <br/>
 ~~/codit-task $: npm start 
 
 **Note: 고민사항**
