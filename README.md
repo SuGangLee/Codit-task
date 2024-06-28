@@ -27,17 +27,15 @@
 - 파일을 업로드 시, pdf를 볼 수 있는 'pdf 원문보기' 버튼과 '개정사항 요약' 버튼이 추가된다.
 
 
+pages/pdf
 **pdf 원문보기 페이지**
 
-
-- pages/pdf
-
-    PdfViewer.js (한번에 pdf를 보여주는 컴포넌트)    
-  
+`PdfViewer.js`  
+- 한번에 pdf를 보여주는 컴포넌트
 - doc 객체로 pdf의 page 정보를 PdfPage.js에 넘긴다. 
 - 한번에 여러 pdf 페이지를 뷰잉할 수 있도록 page 로직과 분리하였다. 
 
-    PdfPage.js
+`PdfPage.js`
   
 - 각 페이지 별로 getPage 로 현재 페이지 정보를 받아오고 viewport를 설정한다.
 - canvas 태그로 현재 페이지를 렌더링한다.
@@ -45,16 +43,16 @@
   
 **개정사항 요약 페이지**
 
-    PdfParse.js    
+`PdfParse.js`
     
 1. 개정사항은 "신·구조문대비표" 문자열 이후에 테이블 형식으로 쓰였다. 이것의 y위치로 테이블의 시작 부분을 구분했다. 
 2. 모든 테이블이 고정 너비를 가짐을 확인할 수 있었다. 이것으로 열을 구분했다. middleX = ( 행 끝 x위치 - 행 시작 x위치 ) / 2  
 3. 얻은 행렬 데이터를 table 구조로 출력한다.
    
-    findLoc 함수
+`findLoc 함수`
    
 - 테이블 시작 위치를 찾아 props에 저장한다.
-    parsingRow 함수
+`parsingRow 함수`
   
 - 테이블이 시작되는 page와 y이후의 문자에 대해서 행별로 왼쪽, 오른쪽 문자를 리스트에 담아 dataList에 저장한다.
 
